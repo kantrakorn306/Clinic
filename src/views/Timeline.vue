@@ -37,19 +37,19 @@
       <!-- NAVIGATION DRAWER -->
 
     <v-main>
-      <dashboard />
+      <history />
     </v-main>
   </v-app>
 </template>
 
 <script>
-import dashboard from "../components/dashboard";
+import history from "../components/history";
 
 export default {
-  name: "Home",
+  name: "Timeline",
 
   components: {
-    dashboard,
+    history,
   },
   data() {
     return {

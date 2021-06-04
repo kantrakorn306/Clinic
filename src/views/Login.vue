@@ -1,15 +1,10 @@
 <template>
   <v-container>
     <h1>This is a login page</h1>
-
     <!-- LOGO -->
     <v-row align="center" justify="center">
-      <v-img
-        max-height="150"
-        max-width="250"
-        contain
-        src="https://picsum.photos/id/11/500/300"
-      ></v-img
+      <v-avatar color="#F78D21" size="250"
+        ><img src="../assets/logo.jpg" alt="LOGO" /></v-avatar
     ></v-row>
     <!-- LOGO -->
 
@@ -20,7 +15,7 @@
           label="USERNAME"
           solo
           rounded
-          prepend-inner-icon="mdi-map-marker"
+          prepend-inner-icon="mdi-account"
         ></v-text-field
       ></v-col>
     </v-row>
@@ -33,7 +28,7 @@
           label="PASSWORD"
           solo
           rounded
-          prepend-inner-icon="mdi-map-marker"
+          prepend-inner-icon="mdi-lock"
         ></v-text-field
       ></v-col>
     </v-row>
@@ -41,16 +36,20 @@
 
     <!-- LOGIN -->
     <v-row class="align-center">
-      <v-col cols="12" sm="8" class="text-right">
+      <v-col cols="12" sm="10" class="text-right">
         <v-btn dark rounded color="#F78D21">LOGIN</v-btn>
       </v-col>
     </v-row>
     <!-- LOGIN -->
+  
   </v-container>
 </template>
 
 <style scoped>
 .v-text-field {
   width: 500px;
+}
+*{
+  background-color : red;
 }
 </style>

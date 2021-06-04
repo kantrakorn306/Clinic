@@ -1,23 +1,29 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
+import Timeline from '../views/Timeline.vue'
+import VueApexCharts from 'vue-apexcharts'
+Vue.use(VueApexCharts)
 
 Vue.use(VueRouter)
-
+Vue.component('apexchart', VueApexCharts)
 const routes = [
   {
-    path: '/',
+    path: '/home',
     name: 'Home',
     component: Home
   },
   {
-    path: '/login',
+    path: '/',
     name: 'Login',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/Login.vue')
-  }
+    component: () => import('../views/Login.vue')
+  },
+  {
+    path: '/timeline',
+    name: 'Timeline',
+    component: Timeline
+  },
+
 ]
 
 const router = new VueRouter({
